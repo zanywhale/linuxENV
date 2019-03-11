@@ -13,9 +13,15 @@ sudo apt-get install htop -y
 
 # zsh
 mkdir git
-git clone https://github.com/robbyrussell/oh-my-zsh ~/git/oh-my-zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/git/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/git/zsh-autosuggestions
+git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# ~/.zshrc // plugins=(zsh-autosuggestions)
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# ~/.zshrc // plugins=(zsh-syntax-highlighting)
+
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sudo chsh zanywhale -s /bin/zsh
 
 # Get .ssh keyfiles
 # Change default ssh port (/etc/ssh/sshd_config) // sudo service ssh restart
