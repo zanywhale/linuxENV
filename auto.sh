@@ -1,9 +1,11 @@
 #!/bin/bash
 
+## Based on Ubuntu 18.04
 # Default
 sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup
 sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 sudo sed -i 's/security.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+sudo sed -i 's/us.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
@@ -12,7 +14,6 @@ sudo apt-get install ssh vim tmux git zsh -y
 sudo apt-get install htop -y
 
 # zsh
-mkdir git
 git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # ~/.zshrc // plugins=(zsh-autosuggestions)
@@ -23,6 +24,20 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sudo chsh zanywhale -s /bin/zsh
 
+# tmux
+git clone https://github.com/zanywhale/.tmux.git ~/
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
+
+# pip, pwntools
+sudo apt-get install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
+sudo pip install --upgrade pip
+sudo pip install --upgrade pwntools
+
+# gdb peda
+git clone https://github.com/longld/peda.git ~/
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+sudo echo "source ~/peda/peda.py" >> /root/.gdbinit
+
 # Get .ssh keyfiles
 # Change default ssh port (/etc/ssh/sshd_config) // sudo service ssh restart
-
