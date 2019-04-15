@@ -24,6 +24,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sudo chsh zanywhale -s /bin/zsh
 
+echo unsetopt share_history >> ~/.zshrc
+
 # tmux
 git clone https://github.com/zanywhale/.tmux.git ~/
 ln -s -f .tmux/.tmux.conf
