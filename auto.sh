@@ -24,6 +24,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sudo chsh zanywhale -s /bin/zsh
 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+# ~/.zshrc // plugins=(fzf)
+
 echo unsetopt share_history >> ~/.zshrc
 
 # tmux
