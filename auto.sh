@@ -42,7 +42,7 @@ sudo pip install --upgrade pip
 sudo pip install --upgrade pwntools
 
 # gdb peda
-git clone https://github.com/longld/peda.git ~/
+git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 sudo echo "source ~/peda/peda.py" >> /root/.gdbinit
 
