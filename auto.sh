@@ -6,6 +6,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup
 sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 sudo sed -i 's/security.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 sudo sed -i 's/us.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+sudo sed -i 's/us.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
