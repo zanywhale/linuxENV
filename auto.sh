@@ -11,7 +11,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # Utility
-sudo apt-get install ssh vim tmux git zsh -y
+sudo apt-get install ssh vim tmux git zsh net-tools -y
 sudo apt-get install htop -y
 
 # zsh
