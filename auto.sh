@@ -37,7 +37,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 echo unsetopt share_history >> ~/.zshrc
 
 # tmux
-git clone https://github.com/zanywhale/.tmux.git ~/
+git clone https://github.com/zanywhale/.tmux.git ~/.tmux
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
