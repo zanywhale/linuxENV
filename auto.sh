@@ -14,6 +14,11 @@ sudo apt-get upgrade -y
 sudo apt-get install ssh vim tmux git zsh net-tools -y
 sudo apt-get install htop -y
 
+# libc32
+sudo dpkg --add-architecture i386
+sudo apt-get update -y
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 -y
+
 # zsh
 git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
