@@ -17,7 +17,7 @@ sudo apt-get install htop -y
 # libc32
 sudo dpkg --add-architecture i386
 sudo apt-get update -y
-sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 -y
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 gcc-6-multilib -y
 
 # zsh
 git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
