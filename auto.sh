@@ -33,6 +33,7 @@ sudo chsh zanywhale -s /bin/zsh
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 # ~/.zshrc // plugins=(fzf)
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
 
 echo unsetopt share_history >> ~/.zshrc
 
