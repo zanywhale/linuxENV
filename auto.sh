@@ -59,6 +59,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 # ~/.zshrc // plugins=(fzf)
 # plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
+sudo sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)/g' ~/.zshrc
 
 echo unsetopt share_history >> ~/.zshrc
 
