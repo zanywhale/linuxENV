@@ -42,6 +42,7 @@ python3 -m pip install --upgrade pwntools
 git clone https://github.com/pwndbg/pwndbg ~/pwndbg
 cd ~/pwndbg
 ./setup.sh
+cd ~/
 
 # zsh
 git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
@@ -52,7 +53,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # ~/.zshrc // plugins=(zsh-syntax-highlighting)
 
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-sudo chsh -s /bin/zsh
+sudo chsh -s `which zsh`
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
