@@ -7,22 +7,22 @@
 # sudo sed -i 's/security.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 #sudo sed -i 's/us.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 # sudo sed -i 's/us.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
-sudo apt-get update -y
-sudo apt-get upgrade -y
+sudo apt update -y
+sudo apt upgrade -y
 
 # Utility
-sudo apt-get install openssh-server ssh vim tmux git zsh net-tools curl htop -y
+sudo apt install openssh-server ssh vim tmux git zsh net-tools curl htop -y
 
 # For CTF
 mkdir ~/tools
 
 ## Docker
-sudo apt-get install curl -fsSL https://get.docker.com -o ~/tools/get-docker.sh -y
+sudo apt install curl -fsSL https://get.docker.com -o ~/tools/get-docker.sh -y
 sudo sh ~/tools/get-docker.sh
-sudo apt-get install doker-compose -y
+sudo apt install doker-compose -y
 
 ## patchelf
-sudo apt-get install dh-autoreconf
+sudo apt install dh-autoreconf -y
 git clone https://github.com/NixOS/patchelf.git tools/patchelf
 cd tools/patchelf
 ./bootstrap.sh
@@ -34,9 +34,9 @@ sudo make install
 ### patchelf --replace-needed libc.so.6 ./libc ./binary
 
 ## Pwntools
-sudo apt-get install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential -y
-python3 -m pip install --upgrade pip
-python3 -m pip install --upgrade pwntools
+sudo apt install python3 python3-pip python3-dev git libssl-dev libffi-dev build-essential -y
+python3 -m pip install --upgrade pip -y
+python3 -m pip install --upgrade pwntools -y
 
 ## pwndbg
 git clone https://github.com/pwndbg/pwndbg ~/pwndbg
@@ -73,5 +73,5 @@ cp .tmux/.tmux.conf.local .
 
 # libc32
 # sudo dpkg --add-architecture i386
-# sudo apt-get update -y
-# sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 gcc-6-multilib -y
+# sudo apt update -y
+# sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386 gcc-6-multilib -y
