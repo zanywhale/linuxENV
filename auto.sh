@@ -2,11 +2,11 @@
 
 ## Based on Ubuntu 22.04
 # Default
-sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup
-sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
-sudo sed -i 's/security.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
-sudo sed -i 's/us.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
-sudo sed -i 's/us.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+# sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup
+# sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+# sudo sed -i 's/security.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+#sudo sed -i 's/us.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+# sudo sed -i 's/us.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
@@ -17,9 +17,9 @@ sudo apt-get install openssh-server ssh vim tmux git zsh net-tools curl htop -y
 mkdir ~/tools
 
 ## Docker
-sudo apt-get install curl -fsSL https://get.docker.com -o ~/tools/get-docker.sh
+sudo apt-get install curl -fsSL https://get.docker.com -o ~/tools/get-docker.sh -y
 sudo sh ~/tools/get-docker.sh
-sudo apt-get install doker-compose
+sudo apt-get install doker-compose -y
 
 ## patchelf
 sudo apt-get install dh-autoreconf
